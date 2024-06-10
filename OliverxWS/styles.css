@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.lang-toggle button {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #333;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #ffffff;
+    margin: 0 0.5rem;
+}
+
+.comics-preview, .fanart-preview {
+    padding: 1rem;
+}
+
+.comics-list, .fanart-list, .product-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.comic, .fanart, .product {
+    border: 1px solid #555;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.comic img, .fanart img, .product img {
+    max-width: 100%;
+}
