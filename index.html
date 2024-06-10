@@ -103,7 +103,20 @@
             width: 30%; /* Ajustar el tamaño de las imágenes según sea necesario */
             margin-bottom: 20px;
         }
-    </style>
+        
+        .fanart-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .fanart-container img {
+            width: 30%; /* Ajustar el tamaño de las imágenes según sea necesario */
+            margin-bottom: 20px;
+        }
+   
+</style>
     <script src="js/script.js" defer></script>
 </head>
 <body class="dark-mode">
@@ -138,14 +151,10 @@
             <!-- Contenido principal -->
             <section class="main-content">
                 <!-- Contenido principal de la página -->
-                <h1>Bienvenido a Comics Website</h1>
+                <h1>Bienvenido</h1>
                 <p>¡Explora los últimos comics y fan art de tus personajes favoritos!</p>
-                
-                <!-- Botón de carga de imágenes -->
-                <input type="file" id="fileUpload" class="hidden">
-                <button class="upload-btn" onclick="document.getElementById('fileUpload').click()">Subir Imagen</button>
 
-                <!-- Imágenes -->
+                <!-- Imágenes --><h1>Dibujos:</h1>
                 <div class="image-container">
                     <img src="images/christmas.jpg" alt="Imagen 1">
                     <img src="images/how to become a millionare.jpg" alt="Imagen 2">
@@ -153,6 +162,10 @@
                     <img src="images/joggling mctus.jpg" alt="Imagen 4">
                     <img src="images/Pezcaldo medicine.jpg" alt="Imagen 5">
                     <img src="images/pezcaldo golden, black.jpg" alt="Imagen 6">
+                </div>
+                <h1>Fan Art</h1>
+                <div class="fanart-container">
+                    <img src="images/mctus_cactus_comic_strip_by_oliover_dg4s35h.jpg" alt="fanart 1">
                 </div>
             </section>
         </div>
@@ -163,10 +176,6 @@
             <a href="https://instagram.com/mctus" target="_blank">McTus Instagram</a>
             <a href="https://instagram.com/pezcaldo" target="_blank">Pezcaldo Instagram</a>
         </div>
-    </footer>
-</body>
-</html>
-
     </footer>
 </body>
 </html>
