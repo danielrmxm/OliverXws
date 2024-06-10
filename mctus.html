@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McTus Comics</title>
+    <title>McTus</title>
+    <link rel="icon" sizes="250x250" href="images/528E3C8A-2027-493B-AFD9-6058089EBF81.png">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
@@ -12,19 +13,74 @@
             background-position: center;
             color: #ffffff; /* Cambia el color del texto según sea necesario */
         }
+
+        /* Estilos para las imágenes */
+        .image-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-item {
+            position: relative;
+            width: 30%; /* Ajustar el tamaño de las imágenes según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+        }
+
+        .image-buttons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .image-buttons button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 14px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        
+
+        .image-buttons .download-button {
+            background-color: #000000;
+        }
+
+        .image-buttons :hover {
+            background-color: #423535
+        }
+
+        h1 {
+            position: static;
+            padding: 10px 14px;
+            justify-content: space-evenly;  
+        }
     </style>
     <script src="js/script.js" defer></script>
-</head>
-<body class="dark-mode">
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/McTus wirh R symbol new design.png" alt="Logo">
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="mctus.html">McTus</a></li>
                 <li><a href="pezcaldo.html">Pezcaldo</a></li>
+                <li><a href="jacobo.html">Jacobo</a></li>
                 <li><a href="fanart.html">Fan Art</a></li>
                 <li><a href="store.html">Tienda</a></li>
             </ul>
@@ -32,13 +88,60 @@
     </header>
     <main>
         <h1>McTus Comics</h1>
-        <!-- Aquí puedes agregar el contenido de McTus -->
+        <div class="image-container">
+            <div class="image-item">
+                <img src="images/mctus_cactus_in_a_boring_wine_tasting_by_oliover_dg5746h.jpg" alt="Imagen 1">
+                <div class="image-buttons">
+                    <button class="download-button" onclick="downloadImage('images/mctus_cactus_in_a_boring_wine_tasting_by_oliover_dg5746h.jpg')">Descargar</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/mctus_cactus_playing_baseball_his_way_by_oliover_dg59rzv.jpg" alt="Imagen 2">
+                <div class="image-buttons">
+                    <button class="download-button" onclick="downloadImage('images/mctus_cactus_playing_baseball_his_way_by_oliover_dg59rzv.jpg')">Descargar</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/mctus_loves_looking_at_the_sky_by_oliover_dgf459u.jpg" alt="Imagen 3">
+                <div class="image-buttons">
+                    <button class="download-button" onclick="downloadImage('images/mctus_loves_looking_at_the_sky_by_oliover_dgf459u.jpg')">Descargar</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/youtube_trap___mctus_cactus_comic_strip_by_oliover_dgsae83.jpg" alt="Imagen 4">
+                <div class="image-buttons">
+                    <button class="download-button" onclick="downloadImage('images/youtube_trap___mctus_cactus_comic_strip_by_oliover_dgsae83.jpg')">Descargar</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/some_sirious_bussines_tactics_by_mctus_and_rupert_by_oliover_dg53asx.jpg" alt="Imagen 5">
+                <div class="image-buttons">
+                    <button class="download-button" onclick="downloadImage('images/some_sirious_bussines_tactics_by_mctus_and_rupert_by_oliover_dg53asx.jpg')">Descargar</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="images/water_business_by_oliover_dgswyu4.jpg" alt="Imagen 6">
+                <div class="image-buttons">
+                    <button class="download-button" onclick="downloadImage('images/water_business_by_oliover_dgswyu4.jpg')">Descargar</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="social-links">
-            <a href="https://instagram.com/mctus" target="_blank">McTus Instagram</a>
+            <a href="https://instagram.com/mctus_cactus" target="_blank">McTus Instagram</a>
             <a href="https://instagram.com/pezcaldo" target="_blank">Pezcaldo Instagram</a>
         </div>
     </footer>
+    <script>
+        function downloadImage(url) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = url.substring(url.lastIndexOf('/') + 1);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
