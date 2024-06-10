@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos adicionales para el sidebar y el botón de carga de imágenes */
+        .sidebar {
+            background-color: #efc109; /* Fondo naranja */
+            color: #ffffff; /* Letras blancas para hacer contraste */
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #fed700; /* Cambio de color al pasar el ratón */
+        }
+
+        .main-content {
+            flex: 1; /* El contenido principal ocupa todo el espacio restante */
+            padding: 20px;
+        }
+
+        /* Estilos para el botón de carga de imágenes */
+        .upload-btn {
+            background-color: #efc109;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .upload-btn:hover {
+            background-color: #fed700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Flexbox para acomodar el sidebar a la derecha */
+        .container {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            /* Aplicar diseño de una columna cuando el ancho de la pantalla sea menor o igual a 768px */
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Estilos para las imágenes */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 30%; /* Ajustar el tamaño de las imágenes según sea necesario */
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="js/script.js" defer></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <div class="logo">
+            <img src="images/McTus Cactus re brand logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="mctus.html">McTus</a></li>
+                <li><a href="pezcaldo.html">Pezcaldo</a></li>
+                <li><a href="fanart.html">Fan Art</a></li>
+                <li><a href="store.html">Tienda</a></li>
+            </ul>
+        </nav>
+        <div class="lang-toggle">
+            <button id="en-btn">EN</button>
+            <button id="es-btn">ES</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                    <li><a href="#">Opción 4</a></li>
+                </ul>
+            </aside>
+
+            <!-- Contenido principal -->
+            <section class="main-content">
+                <!-- Contenido principal de la página -->
+                <h1>Bienvenido a Comics Website</h1>
+                <p>¡Explora los últimos comics y fan art de tus personajes favoritos!</p>
+                
+                <!-- Botón de carga de imágenes -->
+                <input type="file" id="fileUpload" class="hidden">
+                <button class="upload-btn" onclick="document.getElementById('fileUpload').click()">Subir Imagen</button>
+
+                <!-- Imágenes -->
+                <div class="image-container">
+                    <img src="images/christmas.jpg" alt="Imagen 1">
+                    <img src="images/how to become a millionare.jpg" alt="Imagen 2">
+                    <img src="images/mctus cactus fishing.jpg" alt="Imagen 3">
+                    <img src="images/joggling mctus.jpg" alt="Imagen 4">
+                    <img src="images/Pezcaldo medicine.jpg" alt="Imagen 5">
+                    <img src="images/pezcaldo golden, black.jpg" alt="Imagen 6">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/mctus" target="_blank">McTus Instagram</a>
+            <a href="https://instagram.com/pezcaldo" target="_blank">Pezcaldo Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
