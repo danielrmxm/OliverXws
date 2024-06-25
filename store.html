@@ -3,26 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+    <title>Shop</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          color: #ffffff;
+          background-color: #000000;
+        }
+
+        header {
+          background-color: #181818;
+          color: #fff;
+          padding: 1em;
+          text-align: center;
+        }
+
+        header nav ul {
+          list-style: none;
+          margin: 0;
+          display: flex;
+          padding: 20px;
+        }
+
+        header nav li {
+          margin-right: 20px;
+        }
+
+        header nav a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+
+        header nav a:hover {
+          color: #ffffff;
+        }
+
+       .container {
+          max-width: 1200px;
+          margin: 40px auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+       .sidebar {
+          width: 25%;
+          background-color: #181818;
+          padding: 20px;
+          border: 1px solid #181818;
+        }
+
+       .sidebar h2 {
+          margin-top: 0;
+        }
+
+       .sidebar ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+       .sidebar li {
+          margin-bottom: 10px;
+        }
+
+       .sidebar a {
+          text-decoration: none;
+          color: #fed700;
+        }
+
+       .sidebar a:hover {
+          color: #fed700;
+        }
+
+       .price-range {
+          margin-top: 20px;
+        }
+
+       .price-range input[type="range"] {
+          width: 100%;
+        }
+
+       .price-range p {
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+       .shop-content {
+          width: 75%;
+          padding: 20px;
+        }
+
+       .shop-content h1 {
+          margin-top: 0;
+        }
+
+       .product-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 20px;
+        }
+
+       .product {
+          background-color: #181818;
+          border: 1px solid #181818;
+          padding: 20px;
+          text-align: center;
+        }
+
+       .product img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          margin-bottom: 10px;
+        }
+
+       .product h2 {
+          margin-top: 0;
+        }
+
+       .product p {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+       .product button {
+          background-color: #fed700;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+       .product button:hover {
+          background-color: #fed700;
+        }
+
+       .pagination {
+          margin-top: 20px;
+          text-align: center;
+        }
+
+       .pagination a {
+          text-decoration: none;
+          color: #fed700;
+        }
+
+       .pagination a:hover {
+          color: #fed700;
+        }
+
+       .cart {
+          margin-top: 20px;
+          padding: 20px;
+          background-color: #181818;
+          border: 1px solid #181818;
+        }
+
+       .cart h2 {
+          margin-top: 0;
+        }
+
+       .cart ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+       .cart li {
+          margin-bottom: 10px;
+        }
+
+       .cart p {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+       .cart button {
+          background-color: #fed700;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+       .cart button:hover {
+          background-color: #fed700;
+        }
+
+       .cart-product {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          border-bottom: 1px solid #000000;
+        }
+
+       .cart-product:last-child {
+          border-bottom: none;
+        }
+
+       .cart-product img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+    </style>
 </head>
-<body class="dark-mode">
-    <%- include('partials/header') %>
-    <main>
-        <h1>Tienda</h1>
-        <div class="product-list">
-            <!-- Aquí puedes agregar productos de la tienda -->
-            <div class="product">
-                <img src="images/product1.png" alt="Producto 1">
-                <p>Producto 1 - $20</p>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fanart.html">Fanart</a></li>
+                <li><a href="https://www.instagram.com/cheers_comics/?igsh=c2NydXl6b2JpbmMz"></a>Instagram</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Filter by price</h2>
+            <div class="price-range">
+                <input type="range" min="0" max="1000" value="500">
+                <p>Price: $500</p>
             </div>
-            <div class="product">
-                <img src="images/product2.png" alt="Producto 2">
-                <p>Producto 2 - $30</p>
+            <ul>
+                <li><a href="#">Categoria 1</a></li>
+                <li><a href="#">Categoria 2</a></li>
+                <li><a href="#">Categoria 3</a></li>
+            </ul>
+        </div>
+        <div class="shop-content">
+            <h1>Shop</h1>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="images/175bb96da263db2b5849f912c1dfba50-removebg-preview.png" alt="Product 1">
+                    <h2>Product 1</h2>
+                    <p>$200</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/175bb96da263db2b5849f912c1dfba50-removebg-preview.png" alt="Product 2">
+                    <h2>Product 2</h2>
+                    <p>$300</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/175bb96da263db2b5849f912c1dfba50-removebg-preview.png" alt="Product 3">
+                    <h2>Product 3</h2>
+                    <p>$400</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/sudadera_capucha_03_amarillo_827_1024-removebg-preview.png" alt="Product 4">
+                    <h2>Product 4</h2>
+                    <p>$500</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/sudadera_capucha_03_amarillo_827_1024-removebg-preview.png" alt="Product 5">
+                    <h2>Product 5</h2>
+                    <p>$600</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/sudadera_capucha_03_amarillo_827_1024-removebg-preview.png" alt="Product 6">
+                    <h2>Product 6</h2>
+                    <p>$700</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/id_0500_yellow_300_dpi_yr141_700x700-removebg-preview.png" alt="Product 7">
+                    <h2>Product 7</h2>
+                    <p>$800</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/id_0500_yellow_300_dpi_yr141_700x700-removebg-preview.png" alt="Product 8">
+                    <h2>Product 8</h2>
+                    <p>$900</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/id_0500_yellow_300_dpi_yr141_700x700-removebg-preview.png" alt="Product 9">
+                    <h2>Product 9</h2>
+                    <p>$1000</p>
+                    <button>Add to cart</button>
+                </div>
             </div>
         </div>
-    </main>
-    <%- include('partials/footer') %>
-</body>
-</html>
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul>
+                <!--... contenido del carrito... -->
+            </ul>
+            <button>Checkout</button>
+        </div>
+        <script>
+            const cart = document.querySelector('.cart');
+            const cartProducts = document.querySelector('.cart ul');
+            const shopProducts = document.querySelectorAll('.product');
+            const addToCartButtons = document.querySelectorAll('.product button');
+            const checkoutButton = document.querySelector('.cart button[type="button"]');
+    
+            let cartProductsArray = [];
+    
+            // Add to cart functionality
+            for (let i = 0; i < addToCartButtons.length; i++) {
+              addToCartButtons[i].addEventListener('click', () => {
+                const product = shopProducts[i];
+                const productTitle = product.querySelector('h2').innerText;
+                const productPrice = product.querySelector('p').innerText;
+                const productImage = product.querySelector('img').src;
+    
+                const cartProduct = {
+                  title: productTitle,
+                  price: productPrice,
+                  image: productImage
+                };
+    
+                cartProductsArray.push(cartProduct);
+    
+                updateCart();
+              });
+            }
+    
+            // Update cart functionality
+            function updateCart() {
+              cartProducts.innerHTML = '';
+    
+              cartProductsArray.forEach((product) => {
+                const cartProductHTML = `
+                  <li>
+                    <div class="cart-product">
+                      <img src="${product.image}" alt="${product.title}">
+                      <p>${product.title}</p>
+                      <p>${product.price}</p>
+                      <button>Remove</button>
+                    </div>
+                  </li>
+                `;
+    
+                cartProducts.innerHTML += cartProductHTML;
+              });
+    
+              updateCartTotal();
+            }
+    
+            // Update cart total functionality
+            function updateCartTotal() {
+              const cartTotal = cartProductsArray.reduce((acc, current) => {
+                return acc + parseFloat(current.price.replace('$', ''));
+              }, 0);
+    
+              const cartTotalHTML = `
+                <p>Cart total: $${cartTotal.toFixed(2)}</p>
+              `;
+    
+              cart.querySelector('.cart-total').innerHTML = cartTotalHTML;
+            }
+    
+            // Remove from cart functionality
+            cartProducts.addEventListener('click', (e) => {
+              if (e.target.tagName === 'BUTTON') {
+                const cartProductIndex = cartProductsArray.findIndex((product) => {
+                  return product.title === e.target.parentNode.querySelector('p').innerText;
+                });
+    
+                cartProductsArray.splice(cartProductIndex, 1);
+    
+                updateCart();
+              }
+            });
+    
+            // Checkout functionality
+            checkoutButton.addEventListener('click', () => {
+              const cartTotal = cartProductsArray.reduce((acc, current) => {
+                return acc + parseFloat(current.price.replace('$', ''));
+              }, 0);
+    
+              alert(`Checkout total: $${cartTotal.toFixed(2)}`);
+            });
+        </script>
+    </body>
+    </html>
