@@ -7,8 +7,7 @@ Esta es una página web para comics y dibujos. La página tiene secciones para d
 - Ver comics y dibujos de diferentes personajes
 - Enviar y ver fan art
 - Tienda en línea con varios productos
-- Modo oscuro y modo claro
-- Soporte multilingüe (inglés y español)
+- Alta Resolucion de Imagenes
 
 ## Instalación
 
@@ -16,3 +15,10 @@ Esta es una página web para comics y dibujos. La página tiene secciones para d
    ```bash
    git clone <repository_url>
    cd comics-website
+
+## Derechos de Autor
+
+Esta pagina fue desarollada especificamente para una licencia de uso unico, la cual solo puede
+ser usada por: ©CHEERS_COMICS.
+
+© 2024 Wolf Studios Films
